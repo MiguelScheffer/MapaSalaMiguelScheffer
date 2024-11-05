@@ -60,7 +60,6 @@ namespace MapaSalaMiguel.formularios.Editar
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Usuário";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
             // 
@@ -115,6 +114,7 @@ namespace MapaSalaMiguel.formularios.Editar
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // chkAtivo
             // 
@@ -155,10 +155,7 @@ namespace MapaSalaMiguel.formularios.Editar
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         #endregion
 

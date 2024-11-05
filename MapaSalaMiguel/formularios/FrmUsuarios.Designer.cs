@@ -60,6 +60,7 @@ namespace MapaSalaMiguel.formularios
             this.dtGridUsuarios.Size = new System.Drawing.Size(315, 215);
             this.dtGridUsuarios.TabIndex = 11;
             this.dtGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellClick);
+            this.dtGridUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellDoubleClick);
             // 
             // btnSalvar
             // 

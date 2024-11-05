@@ -12,6 +12,8 @@ using MapaSala.DAO;
 using MapaSalaMiguel.formularios.Cadastrar;
 using MapaSala.Formularios.Editar;
 using MapaSala.Formularios.Cadastrar;
+using MapaSalaMiguel.formularios.Editar;
+using MapaSalaMiguel.Classes;
 
 namespace MapaSalaMiguel.formularios
 {
@@ -31,6 +33,11 @@ namespace MapaSalaMiguel.formularios
                 dados.Columns.Add(atributos.Name);
             }
             dtGridUsuarios.DataSource = dao.obterusuario();
+        }
+        private void FecharForm(object sender, FormClosedEventArgs e)
+        {
+            Usuarios u = new Usuarios();
+            dtGridUsuarios.DataSource = u.PreencherGrid();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -119,6 +126,21 @@ namespace MapaSalaMiguel.formularios
             frmCadastrarUsuario frm = new frmCadastrarUsuario();
             frm.FormClosed += Fechou_Editar_FormClosed;
             frm.ShowDialog();
+        }
+
+        private void dtGridUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int id = Convert.ToInt32(
+                    dtGridUsuarios.Rows[e.RowIndex].Cells[0].Value);
+
+                frmEditarUsuarios editar = new frmEditarUsuarios(id);
+
+                // Inscreve-se no evento
+                editar.FormClosed += FecharForm;
+                editar.ShowDialog();
+            }
         }
     }
 }

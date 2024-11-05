@@ -55,7 +55,23 @@ namespace MapaSalaMiguel.formularios.Editar
 
         private void btn_excluir_Click_1(object sender, EventArgs e)
         {
+            Usuarios usuarios = new Usuarios();
+            usuarios.Id = Convert.ToInt32(txtId.Text);
+            usuarios.Excluir();
+            this.Close();
+        }
 
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+
+            Usuarios usuarios = new Usuarios();
+            usuarios.Id = Convert.ToInt32(txtId.Text);
+            usuarios.Login = txtLogin.Text;
+            usuarios.Senha = txtSenha.Text;
+            usuarios.Ativo = chkAtivo.Checked;
+            usuarios.Editar();
+            usuarios = null;
+            this.Close();
         }
     }
 }
