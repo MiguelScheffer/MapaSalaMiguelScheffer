@@ -81,6 +81,7 @@ namespace MapaSala.Formularios.Cadastrar
             this.button1.TabIndex = 9;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chkAtivo
             // 
@@ -112,9 +113,8 @@ namespace MapaSala.Formularios.Cadastrar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmCadastrarUsuarios";
+            this.Name = "frmCadastrarUsuario";
             this.Text = "frmCadastrarUsuarios";
-            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

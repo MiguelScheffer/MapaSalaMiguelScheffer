@@ -51,5 +51,36 @@ namespace MapaSalaMiguel.Formularios.Cadastrar
         {
 
         }
+
+        private void btn_Salvar_Click_1(object sender, EventArgs e)
+        {
+            string query = "insert into Disciplinas (Nome, Sigla, Ativo) Values (@nome, @sigla, @ativo)";
+
+            Conexao = new SqlConnection(LinhaConexao);
+            Conexao.Open();
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            comando.Parameters.Add(new SqlParameter("@sigla", txtSigla.Text));
+            comando.Parameters.Add(new SqlParameter("@nome", txtNomeDisciplina.Text));
+            comando.Parameters.Add(new SqlParameter("@ativo", chkAtivo.Checked));
+
+            int resposta = comando.ExecuteNonQuery();
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Disciplina Cadastrado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao Cadastrar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSigla_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

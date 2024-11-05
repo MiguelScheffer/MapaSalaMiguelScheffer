@@ -52,5 +52,10 @@ namespace MapaSalaMiguel.formularios.Editar
         {
 
         }
+
+        private void btn_excluir_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

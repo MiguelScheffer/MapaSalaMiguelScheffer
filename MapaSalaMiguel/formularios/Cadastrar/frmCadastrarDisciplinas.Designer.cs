@@ -63,6 +63,7 @@ namespace MapaSalaMiguel.Formularios.Cadastrar
             this.btn_Salvar.TabIndex = 11;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click_1);
             // 
             // label2
             // 
@@ -98,6 +99,7 @@ namespace MapaSalaMiguel.Formularios.Cadastrar
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(173, 20);
             this.txtSigla.TabIndex = 7;
+            this.txtSigla.TextChanged += new System.EventHandler(this.txtSigla_TextChanged);
             // 
             // txtNomeDisciplina
             // 
@@ -106,16 +108,14 @@ namespace MapaSalaMiguel.Formularios.Cadastrar
             this.txtNomeDisciplina.Size = new System.Drawing.Size(173, 20);
             this.txtNomeDisciplina.TabIndex = 6;
             // 
-            // frmCadastrarDisciplinas
+            // frmCadastrarDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmCadastrarDisciplinas";
+            this.Name = "frmCadastrarDisciplina";
             this.Text = "frmCadastrarDisciplinas";
-            
-
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

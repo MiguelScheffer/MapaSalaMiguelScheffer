@@ -87,6 +87,7 @@ namespace MapaSalaMiguel.formularios.Editar
             this.btn_excluir.TabIndex = 12;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click_1);
             // 
             // label2
             // 

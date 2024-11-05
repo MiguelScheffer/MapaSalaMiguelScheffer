@@ -71,7 +71,7 @@ namespace MapaSala.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "Select * From Usuarios Order BY Id desc";
+            string query = "Select Id ,Login,Ativo From Usuarios Order BY Id desc";
             SqlCommand comando = new SqlCommand(query, Conexao);
             
             SqlDataReader leitura = comando.ExecuteReader();
@@ -85,10 +85,10 @@ namespace MapaSala.DAO
                 {
                     UsuariosEntidade usuarios = new UsuariosEntidade();
                     usuarios.Id = Convert.ToInt32(leitura[0]);
-                    usuarios.Nome = leitura[1].ToString();
-                    usuarios.Senha = leitura[2].ToString();
-                    usuarios.Login = leitura[3].ToString();
-                    usuarios.Ativo = Convert.ToBoolean(leitura[4]);
+                  
+                   
+                    usuarios.Login = leitura[1].ToString();
+                    usuarios.Ativo = Convert.ToBoolean(leitura[2]);
                     dt.Rows.Add(usuarios.Linha());
 
                    
