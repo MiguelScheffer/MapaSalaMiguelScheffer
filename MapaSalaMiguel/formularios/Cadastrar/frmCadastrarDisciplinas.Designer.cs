@@ -114,18 +114,15 @@ namespace MapaSalaMiguel.Formularios.Cadastrar
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCadastrarDisciplinas";
             this.Text = "frmCadastrarDisciplinas";
-            this.Load += new System.EventHandler(this.frmCadastrarDisciplinas_Load);
+            
+
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
-        private void frmCadastrarDisciplinas_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;

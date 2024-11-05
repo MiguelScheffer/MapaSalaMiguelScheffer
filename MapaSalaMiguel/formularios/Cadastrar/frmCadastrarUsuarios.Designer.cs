@@ -112,19 +112,16 @@ namespace MapaSala.Formularios.Cadastrar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmCadastrarUsuario";
+            this.Name = "frmCadastrarUsuarios";
             this.Text = "frmCadastrarUsuarios";
-            this.Load += new System.EventHandler(this.frmCadastrarUsuarios_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
-        private void frmCadastrarUsuarios_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         #endregion
 
